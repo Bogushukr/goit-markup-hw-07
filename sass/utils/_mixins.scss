@@ -10,3 +10,9 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
+
+@mixin fonts-btn-mod($fs, $lh, $ls) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
