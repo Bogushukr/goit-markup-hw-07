@@ -4,9 +4,7 @@ html {
 
 body {
   font-family: "Roboto";
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.2em;
+  @include fonts-body(18px, 1.71, 0.2em);
   color: $main-text-cl;
 }
 
