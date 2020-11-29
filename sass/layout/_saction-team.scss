@@ -5,7 +5,7 @@
   line-height: 1.166;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black-text);
+  color: $black-text;
 
   padding-bottom: 50px;
   margin-bottom: 0;
@@ -33,7 +33,7 @@
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black-text);
+  color: $black-text;
 
   display: block;
   margin-top: 30px;
@@ -41,7 +41,7 @@
 }
 
 .team {
-  background-color: var(--team-fon);
+  background-color: $team-fon;
 }
 
 .team h4 {
@@ -54,7 +54,7 @@
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-text-cl);
+  color: $main-text-cl;
 
   margin-top: 0;
   margin-bottom: 0;
@@ -67,12 +67,12 @@
   height: 428px;
   margin-right: 30px;
   padding-bottom: 30px;
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
 
-.conainer-time-item:nth-child(4n) {
-  margin-right: 0;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 }

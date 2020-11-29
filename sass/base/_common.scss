@@ -7,7 +7,11 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.2em;
-  color: var(--main-text-cl);
+  color: $main-text-cl;
+}
+
+li {
+  list-style: none;
 }
 
 img {
@@ -16,11 +20,11 @@ img {
 }
 
 .had {
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   height: 80px;
 }
 .hag-port {
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   border: 1px solid #ececec;
   margin-left: 0;
   margin-right: 0;
@@ -38,7 +42,7 @@ img {
 }
 
 .nav .link.current {
-  color: var(--link-text-cl);
+  color: $link-text-cl;
   position: relative;
 }
 
@@ -47,7 +51,7 @@ img {
   display: block;
   width: 110%;
   height: 4px;
-  background-color: var(--link-text-cl);
+  background-color: $link-text-cl;
   border-radius: 2px;
   position: absolute;
   bottom: -32px;

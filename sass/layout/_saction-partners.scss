@@ -6,14 +6,13 @@
 .container-partners {
   display: inline-flex;
   margin: 0;
-  list-style: none;
   padding-left: 0;
 }
 
 .partners-icon-svg {
   width: 170px;
   height: 90px;
-  fill: var(--icon-cl);
+  fill: $icon-cl;
 }
 
 .partners-icon-link {
@@ -22,24 +21,24 @@
   align-items: center;
   width: 170px;
   height: 90px;
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   border-radius: 4px;
-  border: 1px solid var(--icon-cl);
+  border: 1px solid $icon-cl;
+
+  &:hover .partners-icon-svg,
+  &:focus .partners-icon-svg {
+    fill: $link-text-cl;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $wight-text;
+    border: 1px solid $link-text-cl;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .partners-icon-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.partners-icon-link:hover .partners-icon-svg,
-.partners-icon-link:focus .partners-icon-svg {
-  fill: var(--link-text-cl);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.partners-icon-link:hover,
-.partners-icon-link:focus {
-  background-color: var(--wight-text);
-  border: 1px solid var(--link-text-cl);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -15,24 +15,24 @@
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   border-radius: 50%;
 }
 
 .social-icon-link:hover .social-icon-svg,
 .social-icon-link:focus .social-icon-svg {
-  fill: var(--wight-text);
+  fill: $wight-text;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-link:hover,
 .social-icon-link:focus {
-  background-color: var(--link-text-cl);
+  background-color: $link-text-cl;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-svg {
   width: 20px;
   height: 20px;
-  fill: var(--icon-cl);
+  fill: $icon-cl;
 }

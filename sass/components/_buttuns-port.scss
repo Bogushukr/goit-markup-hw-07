@@ -1,21 +1,5 @@
-.btn-port:hover,
-.btn-port:focus {
-  background-color: var(--link-text-cl);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--wight-text);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-port:active {
-  background-color: var(--link-text-cl);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--wight-text);
-}
-
 .btn-port {
-  background: var(--second-fon);
+  background: $second-fon;
   width: 73px;
   padding-right: 22px;
   padding-left: 22px;
@@ -29,7 +13,23 @@
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  color: var(--black-text);
+  color: $black-text;
+
+  &:hover,
+  &:focus {
+    background-color: $link-text-cl;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: $wight-text;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:active {
+    background-color: $link-text-cl;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: $wight-text;
+  }
 }
 
 .btn-content {
@@ -47,10 +47,13 @@
 .nav-content {
   display: flex;
   justify-content: center;
-  list-style: none;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0px;
   padding-top: 94px;
   padding-bottom: 50px;
+
+  .element-cont:last-of-type {
+    margin-right: 0px;
+  }
 }

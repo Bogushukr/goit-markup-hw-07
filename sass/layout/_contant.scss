@@ -2,10 +2,6 @@
   margin-right: 8px;
 }
 
-.nav-content .element-cont:last-of-type {
-  margin-right: 0px;
-}
-
 .content-section {
   padding-bottom: 94px;
 }
@@ -25,31 +21,30 @@
   margin-right: auto;
 }
 
-.container-fillihg .link {
-  padding-bottom: 20px;
-  display: block;
-  padding-left: 24px;
-  letter-spacing: 1px;
-}
-
 .element b {
   font-family: Roboto;
   font-style: normal;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--black-text);
+  color: $black-text;
 }
 
 .container-fillihg {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   padding-left: 0;
   margin-top: 0px;
   margin-bottom: 0;
   width: 1170px;
   height: 1360px;
+
+  .link {
+    padding-bottom: 20px;
+    display: block;
+    padding-left: 24px;
+    letter-spacing: 1px;
+  }
 }
 
 .element {
@@ -58,45 +53,48 @@
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
-}
 
-.element .link {
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-}
+  .link {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+  }
 
-.element:nth-child(3n) {
-  margin-right: 0;
-}
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
-.element:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  &:hover,
+  &:focus {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.element:hover,
-.element:focus {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover .element-overla,
+  &:focus .element-overla {
+    transform: translateY(0);
+  }
+
+  &:hover .element-thumb::before .element:focus .element-thumb::before {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  &:hover .element-actions {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .element-thumb {
   position: relative;
   overflow: hidden;
-}
-
-.element:hover .element-overla,
-.element:focus .element-overla {
-  transform: translateY(0);
-}
-
-.element:hover .element-thumb::before .element:focus .element-thumb::before {
-  opacity: 1;
-  transform: translateY(-100%);
 }
 
 .element-overlay {
@@ -105,7 +103,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--link-text-cl);
+  background-color: $link-text-cl;
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,9 +127,4 @@
   transform: translateY(100%);
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.element:hover .element-actions {
-  opacity: 1;
-  transform: translateY(0);
 }

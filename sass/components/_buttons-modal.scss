@@ -5,8 +5,8 @@
   padding-left: 56px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: var(--wight-text);
-  background: var(--link-text-cl);
+  color: $wight-text;
+  background: $link-text-cl;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   text-align: center;
@@ -32,10 +32,22 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--wight-text);
+  background-color: $wight-text;
   color: white;
   vertical-align: middle;
   cursor: pointer;
+
+  &:hover .backdrop-close-svg,
+  &:focus .backdrop-close-svg {
+    fill: $link-text-cl;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .backdrop-close-svg {
@@ -46,17 +58,5 @@
   left: 9px;
   right: 0;
   bottom: 0;
-  fill: var(--black-text);
-}
-
-.btn-backdrop:hover .backdrop-close-svg,
-.btn-backdrop:focus .backdrop-close-svg {
-  fill: var(--link-text-cl);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-backdrop:hover,
-.btn-backdrop:focus {
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $black-text;
 }
